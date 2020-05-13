@@ -5,3 +5,4 @@ RUN wget https://github.com/TravaOpenJDK/trava-jdk-11-dcevm/releases/download/dc
 RUN wget https://oss.sonatype.org/content/repositories/snapshots/org/hotswapagent/hotswap-agent/1.4.1-SNAPSHOT/hotswap-agent-1.4.1-20200507.153018-6.jar
 RUN mkdir ~/.trava && tar zxvf trava.tgz --strip-components=1 -C ~/.trava
 RUN mv hotswap-agent-1.4.1-20200507.153018-6.jar ~/.trava/lib/hotswap/hotswap-agent.jar
+RUN echo "export JAVA_HOME=/home/gitpod/.trava" > ~/.mavenrc
